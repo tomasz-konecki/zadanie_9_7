@@ -1,0 +1,6 @@
+* {
+	box-sizing: border-box;
+}
+#js-playerPickElement {
+	padding: 10px 0 15px;
+}
