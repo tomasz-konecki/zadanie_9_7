@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Saira');
+
 body {
     background: #e8eff9;
+    font-family: 'Saira', sans-serif;
 }
 #js-playerPickElement {
     padding: 10px 0 15px;
 }
 #js-newGameButton {
 	margin-top: 10px;
+}
+#js-playerName, #js-computerName {
+	font-weight: bold;
+}
+#js-finalWinner {
+	font-size: 28px;
+	font-weight: bold;
+	color: teal;
+	padding: 15px 0;
 }
