@@ -4,3 +4,6 @@ body {
 #js-playerPickElement {
     padding: 10px 0 15px;
 }
+#js-newGameButton {
+	margin-top: 10px;
+}
