@@ -112,13 +112,11 @@ function checkRoundWinner(playerPick, computerPick) {
 
 function checkFinalWinner(playerScore, computerScore) {
     if (playerScore === 10) {
-        console.log(`The winner is ${player.name}`);
         finalWinElem.innerText = `The winner is ${player.name}`;
         gameState = 'ended';
         setGameElements();
     }
     if (computerScore === 10) {
-        console.log(`The winner is computer`);
         finalWinElem.innerText = `The winner is computer`;
         gameState = 'ended';
         setGameElements();
