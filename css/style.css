@@ -4,18 +4,18 @@ body {
     background: #e8eff9;
     font-family: 'Saira', sans-serif;
 }
-#js-playerPickElement {
-    padding: 10px 0 15px;
+.player-pick {
+    padding: 20px 0 25px;
 }
-#js-newGameButton {
-	margin-top: 10px;
+.name {
+    font-weight: bold;
 }
-#js-playerName, #js-computerName {
-	font-weight: bold;
+.final {
+    font-size: 28px;
+    font-weight: bold;
+    color: teal;
+    padding: 15px 0;
 }
-#js-finalWinner {
-	font-size: 28px;
-	font-weight: bold;
-	color: teal;
-	padding: 15px 0;
+.hidden {
+    display: none;
 }

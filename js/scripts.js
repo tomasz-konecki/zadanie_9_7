@@ -38,24 +38,32 @@ pickScissors.addEventListener('click', function() {
 function setGameElements() {
     switch (gameState) {
         case 'started':
-            newGameElem.style.display = 'none';
-            pickElem.style.display = 'block';
-            resultsElem.style.display = 'block';
-            finalWinElem.style.display = 'none';
+            newGameElem.classList.add("hidden");
+            pickElem.classList.remove("hidden");
+            resultsElem.classList.remove("hidden");
+            finalWinElem.classList.add("hidden");
+            playerPickElem.innerText = 'Player selection';
+            computerPickElem.innerText = 'Computer selection';
+            playerResultElem.innerText = 'Player Score';
+            computerResultElem.innerText = 'Computer Score';
             break;
         case 'ended':
             newGameBtn.innerText = 'Play again';
-            finalWinElem.style.display = 'block';
+            finalWinElem.classList.remove("hidden");
+            playerPickElem.innerText = '';
+            computerPickElem.innerText = '';
+            playerResultElem.innerText = '';
+            computerResultElem.innerText = '';
         case 'notStarted':
         default:
-            newGameElem.style.display = 'block';
-            pickElem.style.display = 'none';
-            resultsElem.style.display = 'none';
+            newGameElem.classList.remove("hidden");
+            pickElem.classList.add("hidden");
+            resultsElem.classList.add("hidden");
     }
 }
 
-function newGame() {
-    player.name = prompt('Please enter your name', 'imię gracza');
+function newGame() {    
+    player.name = prompt('Please enter your name', 'player name');
     if (player.name) {
         player.score = computer.score = 0;
         gameState = 'started';
