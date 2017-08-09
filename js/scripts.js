@@ -13,7 +13,6 @@ var newGameElem = document.getElementById('js-newGameElement'),
     playerResultElem = document.getElementById('js-playerResult'),
     computerResultElem = document.getElementById('js-computerResult'),
     finalWinElem = document.getElementById('js-finalWinner'),
-    gameState = 'notStarted', //started // ended
     player = {
         name: '',
         score: 0
@@ -35,7 +34,7 @@ pickScissors.addEventListener('click', function() {
     startRound('scissors')
 });
 
-function setGameElements() {
+function setGameElements(gameState) {
     switch (gameState) {
         case 'started':
             newGameElem.classList.add("hidden");
@@ -66,8 +65,7 @@ function newGame() {
     player.name = prompt('Please enter your name', 'player name');
     if (player.name) {
         player.score = computer.score = 0;
-        gameState = 'started';
-        setGameElements();
+        setGameElements('started');
 
         playerNameElem.innerText = player.name;
         setGamePoints();
@@ -121,14 +119,12 @@ function checkRoundWinner(playerPick, computerPick) {
 function checkFinalWinner(playerScore, computerScore) {
     if (playerScore === 10) {
         finalWinElem.innerText = `The winner is ${player.name}`;
-        gameState = 'ended';
-        setGameElements();
+        setGameElements('ended');
     }
     if (computerScore === 10) {
         finalWinElem.innerText = `The winner is computer`;
-        gameState = 'ended';
-        setGameElements();
+        setGameElements('ended');
     }
 }
 
-setGameElements();
+setGameElements('notStarted');
