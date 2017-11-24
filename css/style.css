@@ -4,6 +4,12 @@ body {
     background: #e8eff9;
     font-family: 'Saira', sans-serif;
 }
+h3 {
+    margin-top: 50px;
+}
+.game-title {
+    margin-top: 20px;
+}
 .player-pick {
     padding: 20px 0 25px;
 }
