@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Saira');
+
+body {
+    background: #e8eff9;
+    font-family: 'Saira', sans-serif;
+}
+.player-pick {
+    padding: 20px 0 25px;
+}
+.name {
+    font-weight: bold;
+}
+.final {
+    font-size: 28px;
+    font-weight: bold;
+    color: teal;
+    padding: 15px 0;
+}
+.hidden {
+    display: none;
+}
